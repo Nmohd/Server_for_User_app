@@ -65,7 +65,7 @@ module.exports.getUserById = async (req, res) => {
   }
 
   res.status(200).json({
-    message: "Success",
+    // message: "Success",
     userData,
   });
 };
