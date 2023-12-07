@@ -16,9 +16,6 @@ const {
   getTeam,
 } = require("../controllers/restApiController");
 
-// app.use(express.json());
-// app.use(express.urlencoded({extended:true}))
-
 router.post("/temp", temp);
 
 router.get("/users", getAllUsers);
