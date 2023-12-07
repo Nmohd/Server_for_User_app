@@ -32,8 +32,8 @@ module.exports.getAllUsers = async (req, res) => {
   let page = req.body.page;
 
   const usersData = await User.find()
-    .skip((page - 1) * 2)
-    .limit(2);
+    .skip((page - 1) * 20)
+    .limit(20);
 
   res.status(200).json({
     message: "Success",
@@ -206,10 +206,10 @@ module.exports.filterUsers = async (req, res) => {
       },
     },
     {
-      $skip: (page - 1) * 2,
+      $skip: (page - 1) * 20,
     },
     {
-      $limit: 2,
+      $limit: 20,
     },
   ]);
 
