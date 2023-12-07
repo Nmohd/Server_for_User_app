@@ -37,7 +37,7 @@ module.exports.getAllUsers = async (req, res) => {
 
   res.status(200).json({
     message: "Success",
-    usersData,
+    usersData: usersData,
   });
 };
 
